@@ -1,5 +1,5 @@
 <?php
-	/*
+    
     $link = mysqli_connect("localhost", "root", "", "SQL_test_TE");
     
     if($link){
@@ -7,16 +7,19 @@
     }else{
         die("Connection failed!" . mysqli_connect_error());
     }
-    */
+    
 
 
 
     //$return =  SELECT * FROM students WHERE birthdate > __05__; 
 
     //Select studens born after june
-    BornAfterSelection(
-        SELECT * FROM students WHERE SUBSTRING(birthdate, 3, 2) > 05; 
-    )
+    function BornAfterSelection()
+    {
+        $sql = "SELECT * FROM students WHERE SUBSTRING(birthdate, 3, 2) > 05";
+        $res = mysql_query($link, $sql); 
+    }
+    
 
     //write names of courses missing a teacher
     MissingTeacher(
