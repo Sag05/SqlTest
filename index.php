@@ -14,18 +14,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <!--
-    <div id="formContainer">
-        <h3>Welcome
-            <?php
-            //echo htmlspecialchars($_SESSION["username"]) . "!";
-            ?>
-        </h3>
-        <form method="POST" action="logoutScript.php">
-            <button type="submit">Log out</button>
-        </form>
-        <p>This is where we would have text but we don't have text so there is no text here.</p>
-    </div>
-    -->
+    <?php
+        $link = mysqli_connect("localhost", "root", "", "sql_test_te");
+        
+        require __DIR__ . "/task.php";
+
+        One($link);
+        Two($link);
+        Three($link);
+        Four($link);
+        Five($link);
+        Six($link);
+        Seven($link);
+        Eight($link);
+        Nine($link);
+        Ten($link);
+    ?>
 </body>
 </html>
